@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  #push:
+    #branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Begin
+      run: |
+        python3 ./buildAAttf.py
+        
+    - name: Upload to release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "test-AA-ttf"
+#         prerelease: true
+        draft: true
+        title: Build Test
+        files: |
+            *.7z
