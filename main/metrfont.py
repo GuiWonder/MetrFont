@@ -1,5 +1,4 @@
 import os, json, subprocess, platform, tempfile, gc, sys
-from collections import defaultdict
 
 pydir = os.path.abspath(os.path.dirname(__file__))
 otfccdump = os.path.join(pydir, 'otfccdump')
