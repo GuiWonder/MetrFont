@@ -1,8 +1,8 @@
 import os, json, subprocess, platform, tempfile, gc, sys
 
 pydir = os.path.abspath(os.path.dirname(__file__))
-otfccdump = os.path.join(pydir, 'otfccdump')
-otfccbuild = os.path.join(pydir, 'otfccbuild')
+otfccdump = os.path.join(pydir, 'otfcc/otfccdump')
+otfccbuild = os.path.join(pydir, 'otfcc/otfccbuild')
 if platform.system() in ('Mac', 'Darwin'):
 	otfccdump += '1'
 	otfccbuild += '1'
