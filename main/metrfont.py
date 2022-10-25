@@ -64,6 +64,6 @@ for x in set(locals().keys()):
 		del locals()[x]
 gc.collect()
 
-subprocess.run((otfccbuild, '--keep-modified-time', '--keep-average-char-width', '-O3', '-q', '-o', outf, tmpfile))
+subprocess.run((otfccbuild, '--keep-modified-time', '--keep-average-char-width', '-O2', '-q', '-o', outf, tmpfile))
 os.remove(tmpfile)
 print('完成!')
