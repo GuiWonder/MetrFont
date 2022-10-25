@@ -27,12 +27,12 @@ tocl='python3 ./main/metrfont.py'
 tootc='python3 ./main/otf2otc.py -o'
 for va in ('', 'TC', 'SC', 'JP'):
 	for item in os.listdir(f'./src/{fod}{va}'):
-		if item.lower().split('.')[-1] in ('otf', 'ttf'):
+		if item.lower().split('.')[-1] in ('otf', 'ttf')and 'Regular' in item:
 			os.system(f"{tocl} ./src/{fod}{va}/{item} ./fonts/{fod}{va}/{item}") 
 for item in os.listdir(f'./src'):
 	if item.lower().split('.')[-1] in ('otf', 'ttf'):
 		os.system(f"{tocl} ./src/{item} ./fonts/{fod}ST/{item}")
-for va in ('Bold', 'ExtraLight', 'Heavy', 'Light', 'Medium', 'Normal', 'Regular'):
+for va in ('Regular'):
 	os.system(f"{tootc} ./fonts/{fod}OTCs/{fod}-{va}.ttc ./fonts/{fod}/{fod}-{va}.ttf ./fonts/{fod}TC/{fod}TC-{va}.ttf ./fonts/{fod}SC/{fod}SC-{va}.ttf ./fonts/{fod}JP/{fod}JP-{va}.ttf") 
 
 os.system(f'7z a {fod}OTCs.7z ./fonts/{fod}OTCs/*') 
