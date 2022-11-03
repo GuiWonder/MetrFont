@@ -21,7 +21,7 @@ jobs:
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "AdvocateAncientSans TTF"
-        automatic_release_tag: "test-AA-ttf"
+        automatic_release_tag: "test-AA-ttf-1.009"
 #         prerelease: true
 #         draft: true
         title: Build Test
