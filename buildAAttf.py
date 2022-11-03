@@ -38,7 +38,7 @@ for va in ('Bold', 'ExtraLight', 'Heavy', 'Light', 'Medium', 'Normal', 'Regular'
 		f'./fonts/{fod}TC/{fod}TC-{va}.ttf', 
 		f'./fonts/{fod}SC/{fod}SC-{va}.ttf', 
 		f'./fonts/{fod}JP/{fod}JP-{va}.ttf', 
-		f'./fonts/{fod}HW/{fod}HW-{va}.ttf', 
+		f'./fonts/{fod}/{fod}HW-{va}.ttf', 
 		f'./fonts/{fod}TC/{fod}HWTC-{va}.ttf', 
 		f'./fonts/{fod}SC/{fod}HWSC-{va}.ttf', 
 		f'./fonts/{fod}JP/{fod}HWJP-{va}.ttf', 
