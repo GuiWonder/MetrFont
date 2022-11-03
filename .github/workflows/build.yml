@@ -20,7 +20,7 @@ jobs:
     - name: Upload to release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        repo_token: "AdvocateAncientSans TTF"
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "test-AA-ttf"
 #         prerelease: true
         draft: true
