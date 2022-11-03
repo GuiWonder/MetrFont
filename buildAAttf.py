@@ -7,7 +7,7 @@ os.makedirs('./fonts')
 os.system(f'wget -nc -P ./src https://github.com/GuiWonder/SourceHanToClassic/releases/download/1.009-ttf/AdvocateAncientSansTTFs.7z') 
 os.system(f'wget -nc -P ./src https://github.com/GuiWonder/SourceHanToClassic/releases/download/1.009-ttf/AdvocateAncientSansFANTI_TTFs.7z') 
 os.system('7z x ./src/AdvocateAncientSansTTFs.7z -o./src')
-os.system('7z x ./src/AdvocateAncientSansFANTI.7z -o./src')
+os.system('7z x ./src/AdvocateAncientSansFANTI_TTFs.7z -o./src')
 
 fod='AdvocateAncientSans'
 os.makedirs(f'./fonts/{fod}')
@@ -39,9 +39,9 @@ for va in ('Bold', 'ExtraLight', 'Heavy', 'Light', 'Medium', 'Normal', 'Regular'
 		f'./fonts/{fod}SC/{fod}SC-{va}.ttf', 
 		f'./fonts/{fod}JP/{fod}JP-{va}.ttf', 
 		f'./fonts/{fod}HW/{fod}HW-{va}.ttf', 
-		f'./fonts/{fod}HWTC/{fod}HWTC-{va}.ttf', 
-		f'./fonts/{fod}HWSC/{fod}HWSC-{va}.ttf', 
-		f'./fonts/{fod}HWJP/{fod}HWJP-{va}.ttf', 
+		f'./fonts/{fod}TC/{fod}HWTC-{va}.ttf', 
+		f'./fonts/{fod}SC/{fod}HWSC-{va}.ttf', 
+		f'./fonts/{fod}JP/{fod}HWJP-{va}.ttf', 
 	]
 	flsts=' '.join(flst)
 	os.system(f"{tootc} ./fonts/{fod}OTCs/{fod}-{va}.ttc {flsts}") 
